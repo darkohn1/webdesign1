@@ -174,36 +174,3 @@ a:hover span{
 .header-cart-wrapper:hover {
     background: #E15629;
 }
-
-.card{
-    width: 370px;
-    height: 230px;
-    background-image: url('../img/fruit.jpg');
-    background-repeat:no-repeat;
-    border-radius: 10px;
-    border: solid white 5px;
-    margin-top: 2%;
-    
-}
-
-.button{
-    width: 120px;
-    height: 40px;
-    margin-top: 18%;
-    margin-left: 62%;
-}
-
-.undercard{
-    margin-top: 5%;
-    width: 170px;
-    height: 80px;
-    background-color: white;
-    opacity: 80%; 
-    border-top-right-radius:40px;
-    border-bottom-right-radius:40px;
-}
-
-p {
-    padding-left: 10px;
-    margin-bottom: 2px;
-}
