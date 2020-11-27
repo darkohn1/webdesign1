@@ -178,7 +178,6 @@ a:hover span{
 .card{
     width: 370px;
     height: 230px;
-    background-image: url('../img/fruit.jpg');
     background-repeat:no-repeat;
     border-radius: 10px;
     border: solid white 5px;
