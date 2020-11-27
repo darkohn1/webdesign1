@@ -192,14 +192,18 @@ a:hover span{
     margin-left: 62%;
 }
 
-.undercard{
+.undercard {
     margin-top: 5%;
-    width: 170px;
-    height: 80px;
+    width: 190px;
+    height: 90px;
     background-color: white;
-    opacity: 80%; 
-    border-top-right-radius:40px;
-    border-bottom-right-radius:40px;
+    opacity: 80%;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 0;
 }
 
 p {
