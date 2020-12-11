@@ -422,7 +422,7 @@ span.like-icon {
 }
 
 .category-popup {
-    display: none;
+    /* display: none; */
 }
 
 .category-popup-wrapper {
@@ -438,8 +438,25 @@ span.like-icon {
     justify-content: center;
 }
 
+
 .popup-content {
     width: 400px;
     height: 400px;
     background: white;
+}
+ #category-popup-close-btn i{
+     color:white;
+     
+
+
+ }
+#category-popup-close-btn {
+    text-align: right;
+}
+
+.popup-title {
+  background: #333333;
+  color: white;
+  font-size: 15px;
+  padding: 20px;
 }
