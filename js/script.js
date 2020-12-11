@@ -28,4 +28,15 @@ var x = setInterval(function() {
   }
 }, 1000);
 
+
+// CATEGORIES POPUP
+$("#category-popup-btn").click(function(){
+  $(".category-popup").fadeIn();
+});
+$("#category-popup-close-btn").click(function(){
+  $(".category-popup").fadeOut();
+});
+
+
+
 });
