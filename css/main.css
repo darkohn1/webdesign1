@@ -784,3 +784,8 @@ button {
 .active {
     color: #f55d2c;
 }
+ .header-mobile {display:none;}
+@media only screen and (max-width:768px) { 
+  .header {display: none;}
+  .header-mobile {display:block;}
+ }
