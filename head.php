@@ -33,6 +33,7 @@
 </head>
 
 <body>
+    <div class="header-mobile"> text</div>
     <div class="header">
         <div class="header-top">
             <div class="header-left">
