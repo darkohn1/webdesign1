@@ -377,13 +377,15 @@
     </div>
 
 
-
+    <?php if($selectedNavPoint == "home") { ?>
     <script>
+
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 5,
             spaceBetween: 30,
             loop: true
         });
     </script>
+    <?php } ?>
 </body>
 </html>
