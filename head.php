@@ -115,6 +115,12 @@
             </div>
             <div class="main-navigation-wrapper">
                 <ul class="main-menu">
+                    <?php 
+                    foreach ($nav as $item){
+                        echo ' <li> <a href="'.$item['link'].'"> '.$item['name'].' </a> </li>';
+                    }
+
+                    ?>
                     <li><a class="<?php if ($selectedNavPoint == 'home') {echo 'active';} ?>" href="/">Home</a></li>
                     <li><a class="<?php if ($selectedNavPoint == 'new-products') {echo 'active';} ?>" href="/new-products">New Products</a></li>
                     <li><a class="<?php if ($selectedNavPoint == 'featured-products') {echo 'active';} ?>" href="/featured-products">Featured Products</a></li>+
