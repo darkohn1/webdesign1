@@ -1,5 +1,15 @@
 <?php
     global $selectedNavPoint;
+    global $nav;
+    $nav = array(
+        array("name" => "Home", "link" => "/"),
+        array("name" => "New Products", "link" => "/new-products"),
+        array("name" => "Featured Products", "link" => "/featured-products"),
+        array("name" => "About Us", "link" => "/about-us"),
+        array("name" => "Pages", "link" => "/pages"),
+        array("name" => "Blog", "link" => "/blog"),
+        array("name" => "Contact Us", "link" => "/contact"),
+    );
 ?>
 <!DOCTYPE html>
 <html>
