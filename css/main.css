@@ -789,3 +789,20 @@ button {
   .header {display: none;}
   .header-mobile {display:block;}
  }
+
+ .header-mobile-top{
+    display: flex;
+    justify-content: space-between;
+ }
+ .header-mobile-top-left{
+     /* float: left; */
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+ }
+ .header-mobile-top-right{
+    /* float: right; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+ }

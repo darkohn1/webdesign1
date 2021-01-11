@@ -33,7 +33,55 @@
 </head>
 
 <body>
-    <div class="header-mobile"> text</div>
+    <div class="header-mobile">
+        <div class="header-mobile-top">
+            <div class="header-mobile-top-left">
+                <div class="logo-wrapper">
+                    <a href="#">
+                        <img src="/img/logo-mobile.svg" alt="Gambo">
+                    </a>
+                </div>
+                <div class="location-wrapper">
+                    <div class="location">
+                        <select name="location" id="location">
+                            <option value="Skopje">Skopje</option>
+                            <option value="Shtip">Shtip</option>
+                            <option value="Ohrid">Ohrid</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="header-mobile-top-right">
+                <div>
+                    <div class="header-wishlist">
+                        <a href="#" class="wishlist-icon-wrapper">
+                            <i class="far fa-heart"></i>
+        
+                            <div class="wishlist-counter">
+                                <span>3</span>
+                            </div>
+                        </a>
+                    </div>
+        
+                </div>
+                <div class="profile-menu">
+                    <div class="profile-avatar">
+                        <img src="/img/avatar.jpg" alt="John Doe">
+                    </div>
+                    <div class="profile-name">
+        
+                        <span class="name-chevron"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="header-mobile-bottom"> </div>
+
+    </div>
     <div class="header">
         <div class="header-top">
             <div class="header-left">
@@ -106,12 +154,17 @@
             <div class="main-navigation-wrapper">
                 <ul class="main-menu">
                     <li><a class="<?php if ($selectedNavPoint == 'home') {echo 'active';} ?>" href="/">Home</a></li>
-                    <li><a class="<?php if ($selectedNavPoint == 'new-products') {echo 'active';} ?>" href="/new-products">New Products</a></li>
-                    <li><a class="<?php if ($selectedNavPoint == 'featured-products') {echo 'active';} ?>" href="/featured-products">Featured Products</a></li>+
-                    <li><a class="<?php if ($selectedNavPoint == 'about') {echo 'active';} ?>" href="/about-us">About Us</a></li>
-                    <li><a class="<?php if ($selectedNavPoint == 'pages') {echo 'active';} ?>" href="/pages">Pages</a></li>
+                    <li><a class="<?php if ($selectedNavPoint == 'new-products') {echo 'active';} ?>"
+                            href="/new-products">New Products</a></li>
+                    <li><a class="<?php if ($selectedNavPoint == 'featured-products') {echo 'active';} ?>"
+                            href="/featured-products">Featured Products</a></li>+
+                    <li><a class="<?php if ($selectedNavPoint == 'about') {echo 'active';} ?>" href="/about-us">About
+                            Us</a></li>
+                    <li><a class="<?php if ($selectedNavPoint == 'pages') {echo 'active';} ?>" href="/pages">Pages</a>
+                    </li>
                     <li><a class="<?php if ($selectedNavPoint == 'blog') {echo 'active';} ?>" href="/blog">Blog</a></li>
-                    <li><a class="<?php if ($selectedNavPoint == 'contact') {echo 'active';} ?>" href="/contact-us">Contact Us</a></li>
+                    <li><a class="<?php if ($selectedNavPoint == 'contact') {echo 'active';} ?>"
+                            href="/contact-us">Contact Us</a></li>
                 </ul>
             </div>
             <div class="header-cart-wrapper">
