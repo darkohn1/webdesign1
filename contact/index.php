@@ -46,6 +46,19 @@ include('../head.php');
                 Друг пол
                 <input type="text" name="pol_other">
             </label>
+            
+            //////
+
+            <label>
+                Visina
+            <input type="number" name="visina">
+            </label>
+            <label id="vreme" class="is-hidden">
+                vreme
+                <input type="text" name="vreme">
+            </label>
+            
+
 
 
         </form>
@@ -70,6 +83,22 @@ include('../head.php');
         }
 
     });
+
+    $('input[name=visina]').change(function() {
+        var visinaValue = $('input[name="visina"]').val();
+        if ( visinaValue > 200) {
+            $('#vreme').removeClass('is-hidden');
+        } else {
+
+            if ( $('#vreme').hasClass('is-hidden')) {
+                return;
+            } else {
+                $('#vreme').addClass('is-hidden');
+            }
+        }
+    });
+
+
 
 </script>
 
