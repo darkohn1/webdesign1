@@ -1,15 +1,7 @@
 <?php
     global $selectedNavPoint;
     global $nav;
-    $nav = array(
-        array("name" => "Home", "link" => "/"),
-        array("name" => "New Products", "link" => "/new-products"),
-        array("name" => "Featured Products", "link" => "/featured-products"),
-        array("name" => "About Us", "link" => "/about-us"),
-        array("name" => "Pages", "link" => "/pages"),
-        array("name" => "Blog", "link" => "/blog"),
-        array("name" => "Contact Us", "link" => "/contact"),
-    );
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -116,18 +108,30 @@
             <div class="main-navigation-wrapper">
                 <ul class="main-menu">
                     <?php 
-                    foreach ($nav as $item){
-                        echo ' <li> <a href="'.$item['link'].'"> '.$item['name'].' </a> </li>';
-                    }
+
+                        $nav = array(
+                            array("name" => "Home", "link" => "/", "index"=>"home"),
+                            array("name" => "New Products", "link" => "/new-products", "index"=>"new-products"),
+                            array("name" => "Featured Products", "link" => "/featured-products", "index"=>"featured-products"),
+                            array("name" => "About Us", "link" => "/about-us", "index"=>"about"),
+                            array("name" => "Pages", "link" => "/pages", "index"=>"pages"),
+                            array("name" => "Blog", "link" => "/blog", "index"=>"blog"),
+                            array("name" => "Contact Us", "link" => "/contact", "index"=>"contact"),
+                        );
+
+
+                        foreach ($nav as $item){
+                            echo '<li><a class="';
+                            
+                            if ($selectedNavPoint == $item['index']) {
+                                echo 'active';
+                            }
+                            
+                            echo '" href="'.$item['link'].'">'.$item['name'].'</a></li>';
+                        }
 
                     ?>
-                    <li><a class="<?php if ($selectedNavPoint == 'home') {echo 'active';} ?>" href="/">Home</a></li>
-                    <li><a class="<?php if ($selectedNavPoint == 'new-products') {echo 'active';} ?>" href="/new-products">New Products</a></li>
-                    <li><a class="<?php if ($selectedNavPoint == 'featured-products') {echo 'active';} ?>" href="/featured-products">Featured Products</a></li>+
-                    <li><a class="<?php if ($selectedNavPoint == 'about') {echo 'active';} ?>" href="/about-us">About Us</a></li>
-                    <li><a class="<?php if ($selectedNavPoint == 'pages') {echo 'active';} ?>" href="/pages">Pages</a></li>
-                    <li><a class="<?php if ($selectedNavPoint == 'blog') {echo 'active';} ?>" href="/blog">Blog</a></li>
-                    <li><a class="<?php if ($selectedNavPoint == 'contact') {echo 'active';} ?>" href="/contact-us">Contact Us</a></li>
+                    
                 </ul>
             </div>
             <div class="header-cart-wrapper">
