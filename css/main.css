@@ -789,3 +789,12 @@ button {
   .header {display: none;}
   .header-mobile {display:block;}
  }
+
+
+ label {
+     display: block;
+ }
+
+.is-hidden {
+     display:none;
+ }
