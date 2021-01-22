@@ -1,42 +1,74 @@
-$(document).ready(function(){
-    
-    var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+$(document).ready(function () {
 
-// Update the count down every 1 second
-var x = setInterval(function() {
 
-  // Get today's date and time
-  var now = new Date().getTime();
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+  // CATEGORIES POPUP
+  $("#category-popup-btn").click(function () {
+    $(".category-popup").fadeIn();
+  });
+  $("#category-popup-close-btn").click(function () {
+    $(".category-popup").fadeOut();
+  });
 
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
 
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+});
+
+
+function sendContact() {
+  var valid;
+  valid = validateContact();
+  if (valid) {
+    jQuery.ajax({
+      url: "/sender.php",
+      data: 'userName=' + $("#userName").val() + '&userEmail=' +
+        $("#userEmail").val() + '&subject=' +
+        $("#subject").val() + '&content=' +
+        $(content).val() + '&phone='+
+        $("#userPhone").val(),
+      type: "POST",
+      success: function (data) {
+        $("#mail-status").html(data);
+      },
+      error: function () { }
+    });
   }
-}, 1000);
+}
 
+function validateContact() {
+  var valid = true;
+  $(".demoInputBox").css('background-color', '');
+  $(".info").html('');
+  if (!$("#userName").val()) {
+    $("#userName-info").html("(required)");
+    $("#userName").css('background-color', '#FFFFDF');
+    valid = false;
+  }
 
-// CATEGORIES POPUP
-$("#category-popup-btn").click(function(){
-  $(".category-popup").fadeIn();
-});
-$("#category-popup-close-btn").click(function(){
-  $(".category-popup").fadeOut();
-});
-
-
-
-});
+  if (!$("#userEmail").val()) {
+    $("#userEmail-info").html("(required)");
+    $("#userEmail").css('background-color', '#FFFFDF');
+    valid = false;
+  }
+  if (!$("#userPhone").val()) {
+    $("#userPhone-info").html("(required)");
+    $("#userPhone").css('background-color', '#FFFFDF');
+    valid = false;
+  }
+  if (!$("#userEmail").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+    $("#userEmail-info").html("(invalid)");
+    $("#userEmail").css('background-color', '#FFFFDF');
+    valid = false;
+  }
+  if (!$("#subject").val()) {
+    $("#subject-info").html("(required)");
+    $("#subject").css('background-color', '#FFFFDF');
+    valid = false;
+  }
+  if (!$("#content").val()) {
+    $("#content-info").html("(required)");
+    $("#content").css('background-color', '#FFFFDF');
+    valid = false;
+  }
+  return valid;
+}
