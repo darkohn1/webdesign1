@@ -31,7 +31,7 @@
     <script src="/js/script.js"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/img/favicon.png">
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 </head>
 
 <body>
